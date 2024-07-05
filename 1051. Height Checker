@@ -1,0 +1,14 @@
+class Solution(object):
+    def heightChecker(self, heights):
+        """
+        :type heights: List[int]
+        :rtype: int
+        """
+        sorted_list = sorted(heights)
+        diff_count = 0
+        
+        for i in range(len(heights)):
+            if heights[i] != sorted_list[i]:
+                diff_count += 1
+        
+        return diff_count
